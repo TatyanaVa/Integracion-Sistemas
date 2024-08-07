@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>Ingresar Nota del Estudiante</h2>
+    <form (ngSubmit)="onSubmit()" notaForm="ngForm">
+      <div class="form-group">
+        <label for="nombre">Nombre del Estudiante</label>
+        <input type="text" id="nombre" class="form-control"  name="nombre">
+      </div>
+      <div class="form-group">
+        <label for="asignatura">Asignatura</label>
+        <input type="text" id="asignatura" class="form-control"  name="asignatura">
+      </div>
+      <div class="form-group">
+        <label for="nota" class="small-label">Nota</label>
+        <input type="number" id="nota" class="form-control"  name="nota" min="0" max="100">
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar Nota</button>
+    </form>
+  </div>
+  

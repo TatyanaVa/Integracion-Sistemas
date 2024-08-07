@@ -1,0 +1,23 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-size: 1rem; 
+  }
+  
+  .form-group label.small-label {
+    font-size: 0.8rem; 
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+  }
+  
