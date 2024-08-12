@@ -9,10 +9,15 @@ export class StudentsService {
 
   constructor(private http: HttpClient) { }
 
-  private API_STUDENT="http://localhost:3000/students"
+  private API_STUDENT="http://localhost:3000/work";
+  private API_GRADES="http://localhost:3000/grades";
 
   getStudent():Observable<any>{
     return this.http.get(this.API_STUDENT)
+  }
+
+  getGrades(): Observable<any> {
+    return this.http.get(this.API_GRADES);
   }
 
   postStudent(student:any):Observable<any>{

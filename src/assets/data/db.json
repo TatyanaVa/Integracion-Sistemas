@@ -1,0 +1,36 @@
+{
+  "work": [
+    {
+      "id": "1003046131",
+      "titulo": "Evaluacion",
+      "nombre": "Tatiana Vaca"
+    },
+    {
+      "id": "0400709358",
+      "titulo": "Tarea 1",
+      "nombre": "Pedro Marmol"
+    },
+    {
+      "id": "0401218573",
+      "titulo": "Taller 1",
+      "nombre": "Carla Flores"
+    }
+  ],
+  "grade": [
+    {
+      "id": 2,
+      "nombre": "Tatiana Vaca",
+      "nota": 7
+    },
+    {
+      "id": 1723431734498,
+      "nombre": "Pedro Marmol",
+      "nota": 9
+    },
+    {
+      "id": 1723431874764,
+      "nombre": "Carla Flores",
+      "nota": 9
+    }
+  ]
+}

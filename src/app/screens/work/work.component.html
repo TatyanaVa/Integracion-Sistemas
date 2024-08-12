@@ -1,58 +1,27 @@
-
-
 <div class="container mt-5">
     <h1 class="mb-4">Envio de Tareas</h1>
-
-    
-    <form id="assignmentForm">
+    <form (ngSubmit)="enviarTarea()" #form="ngForm">
         <div class="form-group">
-            <label for="studentName">Nombre del Estudiante</label>
-            <input type="text" class="form-control" id="studentName" placeholder="Nombre del Estudiante" required>
+            <label for="studentName">ID Estudiante</label>
+            <input type="text" class="form-control" name="id" [(ngModel)]="id">
+        </div>
+        <div class="form-group">
+            <label for="studentName">Nombre</label>
+            <input type="text" class="form-control" name="nombre" [(ngModel)]="nombre">
         </div>
         <div class="form-group">
             <label for="assignmentTitle">Titulo de la Tarea</label>
-            <input type="text" class="form-control" id="assignmentTitle" placeholder="Titulo de la Tarea" required>
+            <input type="text" class="form-control" name="titulo" [(ngModel)]="titulo">
         </div>
         <div class="form-group">
             <label for="assignmentFile">Archivo de la Tarea</label>
-            <input type="file" class="form-control-file" id="assignmentFile" required>
+            <input type="file" class="form-control-file" >
         </div>
         <button type="submit" class="btn btn-primary">Enviar Tarea</button>
     </form>
 </div>
 
 
-<script>
-    document.getElementById('assignmentForm').addEventListener('submit', function(event) {
-        event.preventDefault();
 
-
-        const studentName = document.getElementById('studentName').value;
-        const assignmentTitle = document.getElementById('assignmentTitle').value;
-        const assignmentFile = document.getElementById('assignmentFile').files[0];
-
-
-        if (!assignmentFile) {
-            alert('Por favor, selecciona un archivo para subir.');
-            return;
-        }
-
-
-        const newRow = document.createElement('tr');
-        const date = new Date().toLocaleDateString();
-        newRow.innerHTML = `
-            <td>${studentName}</td>
-            <td>${assignmentTitle}</td>
-            <td>${assignmentFile.name}</td>
-            <td>${date}</td>
-        `;
-
-
-        document.getElementById('assignmentTableBody').appendChild(newRow);
-
-
-        document.getElementById('assignmentForm').reset();
-    });
-</script>
 
 
