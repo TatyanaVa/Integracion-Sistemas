@@ -24,9 +24,11 @@ export class LoginComponent implements OnInit {
         if (response.success) {
           alert ("Loggeado")
         } else {
+          alert ("Error de credenciales")
           console.log('Error de autenticación');
         }
       }, error => {
+        alert ("Error de credenciales")
         console.log('Error al autenticar:', error);
       });
   }
