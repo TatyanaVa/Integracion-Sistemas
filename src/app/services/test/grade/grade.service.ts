@@ -13,8 +13,8 @@ export class GradeService {
 
   constructor(private http: HttpClient) { }
 
-  private API_GRADE="http://localhost:8081/api/v1/notas";
-  private API_STUDENT="http://localhost:8081/api/v1/estudiantes";
+  private API_GRADE="http://192.168.4.112:8081/api/v1/notas";
+  private API_STUDENT="http://192.168.4.112:8081/api/v1/estudiantes";
 
   getGrade():Observable<any>{
     return this.http.get(this.API_GRADE)

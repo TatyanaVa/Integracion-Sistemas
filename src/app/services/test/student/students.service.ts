@@ -9,8 +9,8 @@ export class StudentsService {
 
   constructor(private http: HttpClient) { }
 
-  private API_STUDENT="http://localhost:8081/api/v1/estudiantes";
-  private API_GRADES="http://localhost:8081/api/v1/notas";
+  private API_STUDENT="http://192.168.4.112:8081/api/v1/estudiantes";
+  private API_GRADES="http://192.168.4.112:8081/api/v1/notas";
 
   getStudent():Observable<any>{
     return this.http.get(this.API_STUDENT)
