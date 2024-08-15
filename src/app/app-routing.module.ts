@@ -7,20 +7,18 @@ import { ReportComponent } from './screens/report/report.component';
 import { AcercaComponent } from './screens/acerca/acerca.component';
 import { WorkComponent } from './screens/work/work.component';
 import { ListGradeComponent } from './screens/list-grade/list-grade.component';
+import { AuthGuard } from './guards/auth.guard';
+import { RoleGuard } from './guards/role.guard';
 
 const routes: Routes = [
 
-  {path: '', component:HomeComponent },
-  {path:'login',component:LoginComponent},
-  {path:'report',component:ReportComponent},
-  {path:'acerca',component:AcercaComponent},
-  {path:'work',component:WorkComponent},
-  {path:'grade',component:ListGradeComponent},
-
-  
-
-  
-  {path:"**",component:Error404Component}
+  { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'report', component: ReportComponent  },
+  { path: 'acerca', component: AcercaComponent },
+  { path: 'work', component: WorkComponent },
+  { path: 'grade', component: ListGradeComponent},
+  { path: '**', component: Error404Component }
 ];
 
 @NgModule({

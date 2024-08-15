@@ -1,22 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { UserService } from '../../services/test/user/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  student = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    dob: ''
-  };
+export class LoginComponent implements OnInit {
 
-  onSubmit() {
-    console.log('Estudiante registrado:', this.student);
-    // Aquí puedes agregar la lógica para enviar los datos a un servidor o procesarlos como sea necesario
+  username = "";
+  password="";
+  tipo=""
+  constructor(private userService: UserService, private router: Router) { }
+
+  ngOnInit(): void { }
+
+  onSubmit(loginForm: NgForm) {
+    const { username, password } = loginForm.value;
+    this.userService.login(username, password)
+      .subscribe(response => {
+        if (response.success) {
+          alert ("Loggeado")
+        } else {
+          alert ("Error de credenciales")
+          console.log('Error de autenticación');
+        }
+      }, error => {
+        alert ("Error de credenciales")
+        console.log('Error al autenticar:', error);
+      });
   }
-
 }
