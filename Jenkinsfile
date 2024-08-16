@@ -28,9 +28,6 @@ node {
         currentBuild.result = 'FAILURE'
         throw e
     } finally {
-        stage('Enviar correo') {
-            // Ejecuta el script de Python para enviar un correo electrónico
-            bat "${pythonPath} ${emailScriptPath}"
-        }
+        
     }
 }
