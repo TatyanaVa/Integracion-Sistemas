@@ -9,7 +9,7 @@ node {
             // Checkout del código fuente desde el repositorio bifurcado
             checkout([
                 $class: 'GitSCM',
-                branches: [[name: '*/master']],
+                branches: [[name: '*/tatianavaca']],
                 userRemoteConfigs: [[url: 'https://github.com/TatyanaVa/Integracion-Sistemas.git']]
             ])
         }
